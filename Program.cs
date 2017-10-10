@@ -6,7 +6,11 @@ namespace Assignment3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<string> category = new List<string>();
+            category.Add("Beverages");
+            category.Add("Condiments");
+            category.Add("Confections");
+            Console.WriteLine("Hello World! " + category);
         }
     }
 }
