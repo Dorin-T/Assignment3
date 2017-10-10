@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Assignment3
 {
@@ -6,11 +7,14 @@ namespace Assignment3
     {
         static void Main(string[] args)
         {
-            List<string> category = new List<string>();
-            category.Add("Beverages");
-            category.Add("Condiments");
-            category.Add("Confections");
-            Console.WriteLine("Hello World! " + category);
+            List<Category> category = new List<Category>();
+            category.Add( new Category {cid = 1, name = "Beverages"} );
+            category.Add( new Category {cid = 2, name = "Condiments"} );
+            category.Add( new Category {cid = 3, name = "Confections"} );
+            Console.WriteLine("Created list: ");
+            foreach (Category c in category) {
+                Console.WriteLine(c.cid + " " + c.name);
+            }
         }
     }
 }
